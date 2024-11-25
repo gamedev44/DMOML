@@ -83,6 +83,8 @@ DMOML was created to improve gameplay in **top-down MOBAs** and other games requ
 - **[Battlerite](https://store.steampowered.com/app/504370/Battlerite/)**: Ideal for executing quick, accurate movements in team fights.
 - **[Heroes of the Storm](https://heroesofthestorm.com/)**: Improve positioning and movement precision.
 - **[Diablo III](https://diablo3.blizzard.com/)**: Enhance control for skill-based movement and dodging.
+- **[Dota 2](https://store.steampowered.com/app/570/Dota_2/)**: Master movement and positioning in this globally popular MOBA.
+
 
 ---
 
@@ -95,7 +97,7 @@ DMOML was created to improve gameplay in **top-down MOBAs** and other games requ
    - [Official Python Tutorial](https://docs.python.org/3/tutorial/)
    - [W3Schools Python Tutorial](https://www.w3schools.com/python/)
 
-3. **Games this tool is most useful for**:
+3. **Links to Games this is Most Usefull With**:
    - [Supervive](https://www.supervivegame.com/)
    - [Battlerite](https://store.steampowered.com/app/504370/Battlerite/)
    - [League of Legends](https://www.leagueoflegends.com/)
