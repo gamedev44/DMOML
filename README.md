@@ -29,12 +29,16 @@ DMOML is a Python-based tool designed by:Asterisk to enhance directional movemen
    Ensure you check the box to **Add Python to PATH** during installation.
 
 2. **Clone or Download the DMOML Script**:
-   - Clone the repository:
+   - **Clone the repository** using Git:
      ```bash
      git clone https://github.com/gamedev44/DMOML.git
-     cd dmoml
+     cd DMOML
      ```
-   - Or download the ZIP from GitHub and extract it.
+   - **Or download the ZIP**:
+     - Go to [https://github.com/gamedev44/DMOML](https://github.com/gamedev44/DMOML).
+     - Click the green **Code** button and select **Download ZIP**.
+     - Extract the ZIP file to a folder of your choice.
+
 
 3. **Run the Program**:
    - Open a terminal or command prompt.
