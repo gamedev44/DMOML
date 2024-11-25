@@ -57,7 +57,7 @@ DMOML is a Python-based tool designed by:Asterisk to enhance directional movemen
    - Navigate to the folder where the script is located.
    - Run the script with:
      ```bash
-     python dmoml.py
+     python DMOML.py
      ```
 
 ---
