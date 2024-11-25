@@ -6,12 +6,24 @@ DMOML is a Python-based tool designed by:Asterisk to enhance directional movemen
 
 ## Features
 
-- **Precise Direction Detection**: Splits the screen into 8 "pizza slices" for highly accurate 8-way and diagonal movement.
-- **Customizable Dead Zone**: Adjust the inactive central area to suit your playstyle.
-- **View Cone Threshold**: Dynamically control the extent of the directional segments for fine-tuned movement while keeping them equadistant from one another.
-- **Live Debug Visualization**: View real-time debug data, including mouse position, directional lines, and active slice.
-- **Fullscreen Mode**: Toggle fullscreen mode for a better gaming experience.
-- **Works Across Games**: Designed for **Supervive** and other **top-down MOBAs**.
+- **Precise Direction Detection**: 
+  Splits the screen into 8 precise "pizza slices" for highly accurate 8-way and diagonal movement, ensuring seamless control.
+
+- **Customizable Dead Zone**: 
+  Adjust the inactive central area to match your preferred playstyle and responsiveness.
+
+- **View Cone Threshold**: 
+  Dynamically control the extent of the directional segments, keeping them equidistant and perfectly aligned for fine-tuned movement.
+
+- **Live Debug Visualization**: 
+  Access real-time debug data, including mouse position, directional lines, and the currently active slice.
+
+- **Fullscreen Mode**: 
+  Toggle fullscreen mode with ease for an immersive and distraction-free experience.
+
+- **Works Across Games**: 
+  Optimized for **Supervive** and other popular **top-down MOBAs**, enhancing gameplay precision.
+
 
 ---
 
