@@ -2,6 +2,7 @@ import tkinter as tk
 from threading import Thread
 import time
 import math
+from pynput.keyboard import Controller
 
 # Global variables
 running = True
@@ -11,6 +12,8 @@ center_x, center_y = 0, 0
 deadzone_size = 50  # Default dead zone size
 view_cone_threshold = 200  # Default distance for pizza slice segments
 current_direction = ""  # Current tracking direction
+keyboard_controller = Controller()  # Keyboard controller for emulation
+pressed_keys = set()  # Track currently pressed keys to avoid duplicate events
 
 # Function to track mouse movement
 def track_movement(canvas, direction_label, debug_readout):
@@ -54,21 +57,33 @@ def track_movement(canvas, direction_label, debug_readout):
             if abs(offset_x) > deadzone_size or abs(offset_y) > deadzone_size:
                 angle = math.degrees(math.atan2(-offset_y, offset_x)) % 360
                 if 337.5 <= angle or angle < 22.5:
-                    direction = "D"  # Right
+                    direction = "d"
                 elif 22.5 <= angle < 67.5:
-                    direction = "WD"  # Up-Right
+                    direction = "wd"
                 elif 67.5 <= angle < 112.5:
-                    direction = "W"  # Up
+                    direction = "w"
                 elif 112.5 <= angle < 157.5:
-                    direction = "WA"  # Up-Left
+                    direction = "wa"
                 elif 157.5 <= angle < 202.5:
-                    direction = "A"  # Left
+                    direction = "a"
                 elif 202.5 <= angle < 247.5:
-                    direction = "SA"  # Down-Left
+                    direction = "sa"
                 elif 247.5 <= angle < 292.5:
-                    direction = "S"  # Down
+                    direction = "s"
                 elif 292.5 <= angle < 337.5:
-                    direction = "SD"  # Down-Right
+                    direction = "sd"
+
+            # Update keyboard states
+            keys_to_press = set(direction)
+            keys_to_release = pressed_keys - keys_to_press
+
+            for key in keys_to_press - pressed_keys:
+                keyboard_controller.press(key)
+            for key in keys_to_release:
+                keyboard_controller.release(key)
+
+            pressed_keys.clear()
+            pressed_keys.update(keys_to_press)
 
             # Update the direction label if the direction changes
             if direction and direction != current_direction:
@@ -127,7 +142,7 @@ def adjust_view_cone(value):
 def create_gui():
     global center_x, center_y
     root = tk.Tk()
-    root.title(" DMOML")
+    root.title("DMOML")
     root.geometry("800x600")
     root.configure(bg="black")
 
@@ -137,7 +152,7 @@ def create_gui():
     # Big Logo
     tk.Label(
         root,
-        text=" (D.M.O.M.L) By:Risk",
+        text="(D.M.O.M.L) By:Risk",
         font=("Arial", 24, "bold"),
         fg="white",
         bg="black",
