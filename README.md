@@ -1,127 +1,101 @@
 # DMOML (Directional Mouse-Oriented Movement Lock)
 
-DMOML is a Python-based tool designed by:Asterisk to enhance directional movement in **top-down MOBAs** and similar games. It provides a live, visualized movement system based on mouse position relative to the screen center, making 8-way directional controls more intuitive and responsive.
+DMOML is a Python-based utility designed by **Asterisk** to enhance directional movement in **top-down MOBAs** and similar games. It tracks mouse movement relative to the screen's center and maps this input to 8-way WASD controls, allowing for precise and intuitive gameplay.
 
 ---
 
 ## Features
 
-- **Precise Direction Detection**: 
-  Splits the screen into 8 precise "pizza slices" for highly accurate 8-way and diagonal movement, ensuring seamless control.
+- **Accurate Direction Detection**:  
+  Divides the screen into 8 distinct "pizza slices" for accurate directional inputs, including diagonal movement.
+  
+- **Customizable Dead Zone**:  
+  Adjust the inactive area around the center to suit your responsiveness preferences.
 
-- **Customizable Dead Zone**: 
-  Adjust the inactive central area to match your preferred playstyle and responsiveness.
+- **Dynamic View Cone Threshold**:  
+  Fine-tune the sensitivity and range of the directional segments.
 
-- **View Cone Threshold**: 
-  Dynamically control the extent of the directional segments, keeping them equidistant and perfectly aligned for fine-tuned movement.
+- **Real-Time Debug Visualization**:  
+  Observe live mouse position, directional zones, and the current active slice.
 
-- **Live Debug Visualization**: 
-  Access real-time debug data, including mouse position, directional lines, and the currently active slice.
+- **Fullscreen Mode**:  
+  Debug efficiently with an immersive fullscreen experience.
 
-- **Fullscreen Mode**: 
-  Toggle fullscreen mode with ease for an immersive and distraction-free experience.
-
-- **Works Across Games**: 
-  Optimized for **Supervive** and other popular **top-down MOBAs**, enhancing gameplay precision.
-
+- **Game-Agnostic**:  
+  Works with a variety of games requiring precise directional control.
 
 ---
 
 ## Requirements
 
 - **Python 3.8 or higher**
-- **Tkinter** (included with most Python installations)
+- **Tkinter**: Typically included with Python installations.
+- **pynput**: Required for WASD emulation. Install via:
+  ```bash
+  pip install pynput
+  ```
 
 ---
 
-## Installation Instructions
+## Installation
 
-1. **Download Python**:  
-   [Download Python](https://www.python.org/downloads/)  
-   Ensure you check the box to **Add Python to PATH** during installation.
+1. **Install Python**:  
+   Download Python 3.8+ from [https://www.python.org/downloads/](https://www.python.org/downloads/) and ensure you select "Add Python to PATH" during installation.
 
-2. **Clone or Download the DMOML Script**:
-   - **Clone the repository** using Git:
-     ```bash
-     git clone https://github.com/gamedev44/DMOML.git
-     cd DMOML
-     ```
-   - **Or download the ZIP**:
-     - Go to [https://github.com/gamedev44/DMOML](https://github.com/gamedev44/DMOML).
-     - Click the green **Code** button and select **Download ZIP**.
-     - Extract the ZIP file to a folder of your choice.
+2. **Clone or Download the Script**:  
+   Clone the repository via Git:
+   ```
+   git clone https://github.com/gamedev44/DMOML.git
+   ```
+   Or download the ZIP from the same GitHub repository.
 
+3. **Install Dependencies**:  
+   Open a terminal or command prompt and run the following to install required libraries:
+   ```
+   pip install pynput
+   ```
 
-3. **Run the Program**:
-   - Open a terminal or command prompt.
-   - Navigate to the folder where the script is located.
-   - Run the script with:
-     ```bash
-     python DMOML.py
-     ```
+4. **Run the Program**:  
+   Navigate to the script's directory and execute:
+   ```
+   python DMOML.py
+   ```
 
 ---
 
 ## How to Use DMOML
 
-1. **Start the Program**:
-   - Launch the program using the steps above.
-   - The GUI will open with a live visualization canvas and control sliders.
+1. **Launch the Program**:  
+   Open the DMOML script following the installation steps above.
 
-2. **Adjust the Settings**:
-   - **Deadzone Size**: Use the slider to define the inactive central area where no directional input is triggered.
-   - **View Cone Threshold**: Adjust the size of the directional slices to suit your gameplay.
+2. **Customize Settings**:  
+   - Adjust the **Dead Zone Size** slider to define the inactive area near the center.  
+   - Use the **View Cone Threshold** slider to fine-tune the directional sensitivity.  
 
-3. **Begin Tracking**:
-   - Click **START TRACKING** to enable mouse tracking.
-   - Move the mouse to observe real-time directional updates and debug information.
+3. **Start Tracking**:  
+   Click **START TRACKING** to enable mouse-based directional movement.
 
-4. **Fullscreen Mode**:
-   - Toggle fullscreen mode with the **TOGGLE FULLSCREEN** button for a debugger with a distraction-free experience.
+4. **Use Fullscreen Mode**:  
+   Toggle fullscreen for distraction-free debugging.
 
-5. **Stop or Exit**:
-   - Pause tracking with **STOP TRACKING**.
-   - Quit the program with the **QUIT** button.
+5. **Quit When Done**:  
+   Stop tracking with **STOP TRACKING** or exit the program with **QUIT**.
 
 ---
 
-## Supported Games
+## Compatibility
 
-DMOML was created to improve gameplay in **top-down MOBAs** and other games requiring precise directional movement. It is particularly useful for games that rely on **mouse-based movement and targeting**.
+DMOML is ideal for **top-down MOBAs** or any game requiring precise WASD-based directional control. Examples include:
 
-### Examples of Supported Games:
-- **[Supervive](https://www.supervivegame.com/)**: A fast-paced competitive top-down MOBA.
-- **[League of Legends](https://www.leagueoflegends.com/) (ARAM mode)**: Precise movement helps in tight situations.
-- **[Battlerite](https://store.steampowered.com/app/504370/Battlerite/)**: Ideal for executing quick, accurate movements in team fights.
-- **[Heroes of the Storm](https://heroesofthestorm.com/)**: Improve positioning and movement precision.
-- **[Diablo III](https://diablo3.blizzard.com/)**: Enhance control for skill-based movement and dodging.
-- **[Dota 2](https://store.steampowered.com/app/570/Dota_2/)**: Master movement and positioning in this globally popular MOBA.
-
-
----
-
-## Links to Resources
-
-1. **Download Python**:  
-   [https://www.python.org/downloads/](https://www.python.org/downloads/)
-
-2. **Learn Python Basics**:  
-   - [Official Python Tutorial](https://docs.python.org/3/tutorial/)
-   - [W3Schools Python Tutorial](https://www.w3schools.com/python/)
-
-3. **Links to Games this is Most Usefull With**:
-   - [Supervive](https://www.supervivegame.com/)
-   - [Battlerite](https://store.steampowered.com/app/504370/Battlerite/)
-   - [League of Legends](https://www.leagueoflegends.com/)
-   - [Heroes of the Storm](https://heroesofthestorm.com/)
-   - [Diablo III](https://diablo3.blizzard.com/)
-   - [Dota 2](https://store.steampowered.com/app/570/Dota_2/)
-
+- [Supervive](https://www.supervivegame.com/)
+- [League of Legends (ARAM mode)](https://www.leagueoflegends.com/)
+- [Battlerite](https://store.steampowered.com/app/504370/Battlerite/)
+- [Heroes of the Storm](https://heroesofthestorm.com/)
+- [Diablo III](https://diablo3.blizzard.com/)
+- [Dota 2](https://store.steampowered.com/app/570/Dota_2/)
 
 ---
 
 ## Support and Contribution
 
-If you encounter any issues, have feature requests, or want to contribute, please open an issue or submit a pull request on the GitHub repository.
-
-Enjoy seamless directional control and improved gameplay with DMOML! Have Fun!!!
+For bug reports, feature requests, or contributions, visit the GitHub repository and submit an issue or pull request. Enhance your gameplay precision with DMOML and enjoy intuitive, mouse-driven directional controls!
