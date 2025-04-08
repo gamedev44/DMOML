@@ -1,6 +1,17 @@
-# DMOML (Directional Mouse-Oriented Movement Lock)
+# DMOML (Directional Mouse-Oriented Movement Lock) With the New (Optional) CBOMC (Click Based Oriented Movement Control)
 
 DMOML is a Python-based utility designed by **Asterisk** to enhance directional movement in **top-down MOBAs** and similar games. It tracks mouse movement relative to the screen's center and maps this input to 8-way WASD controls, allowing for precise and intuitive gameplay.
+
+## Table of Contents
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [How to Use DMOML](#how-to-use-dmoml)
+- [Additional Script: CBOMC](#additional-script-cbomc)
+- [Compatibility](#compatibility)
+  - [DMOML Compatibility](#dmoml-compatibility)
+  - [CBOMC Compatibility](#cbomc-compatibility)
+- [Support and Contribution](#support-and-contribution)
 
 ---
 
@@ -30,7 +41,7 @@ DMOML is a Python-based utility designed by **Asterisk** to enhance directional 
 
 - **Python 3.8 or higher**
 - **Tkinter**: Typically included with Python installations.
-- **pynput**: Required for WASD emulation. Install via:
+- **pynput**: Required for input emulation. Install via:
   ```bash
   pip install pynput
   ```
@@ -42,7 +53,7 @@ DMOML is a Python-based utility designed by **Asterisk** to enhance directional 
 1. **Install Python**:  
    Download Python 3.8+ from [https://www.python.org/downloads/](https://www.python.org/downloads/) and ensure you select "Add Python to PATH" during installation.
 
-2. **Clone or Download the Script**:  
+2. **Clone or Download the Repository**:  
    Clone the repository via Git:
    ```
    git clone https://github.com/gamedev44/DMOML.git
@@ -50,16 +61,21 @@ DMOML is a Python-based utility designed by **Asterisk** to enhance directional 
    Or download the ZIP from the same GitHub repository.
 
 3. **Install Dependencies**:  
-   Open a terminal or command prompt and run the following to install required libraries:
+   Open a terminal or command prompt and run:
    ```
    pip install pynput
    ```
 
-4. **Run the Program**:  
+4. **Run the Programs**:  
    Navigate to the script's directory and execute:
-   ```
-   python DMOML.py
-   ```
+   - For directional WASD-based control:
+     ```
+     python DMOML.py
+     ```
+   - For point-and-click RTS/top-down control:
+     ```
+     python CBOMC.py
+     ```
 
 ---
 
@@ -70,7 +86,7 @@ DMOML is a Python-based utility designed by **Asterisk** to enhance directional 
 
 2. **Customize Settings**:  
    - Adjust the **Dead Zone Size** slider to define the inactive area near the center.  
-   - Use the **View Cone Threshold** slider to fine-tune the directional sensitivity.  
+   - Use the **View Cone Threshold** slider to fine-tune the directional sensitivity.
 
 3. **Start Tracking**:  
    Click **START TRACKING** to enable mouse-based directional movement.
@@ -83,10 +99,27 @@ DMOML is a Python-based utility designed by **Asterisk** to enhance directional 
 
 ---
 
+## Additional Script: CBOMC
+
+**CBOMC (Click-Based Oriented Movement Control)** is a new utility included in this repository for users who prefer point-and-click navigation for RTS and top-down games. Instead of emulating WASD keystrokes, CBOMC listens for mouse movement beyond a customizable dead zone and automatically triggers a left mouse click at that position.
+
+- **Key Features**:
+  - Monitors mouse movement relative to the screen center.
+  - Activates a left click when the pointer exits the dead zone.
+  - Shares similar customization settings as DMOML (dead zone size and view cone threshold).
+  - Ideal for point-and-click RTS/top-down gameplay.
+
+*Run CBOMC with:*
+```
+python CBOMC.py
+```
+
+---
+
 ## Compatibility
 
-DMOML is ideal for **top-down MOBAs** or any game requiring precise WASD-based directional control. Examples include:
-
+### DMOML Compatibility
+DMOML is optimized for precise WASD-based directional control and works well with games such as:
 - [Supervive](https://www.supervivegame.com/)
 - [League of Legends (ARAM mode)](https://www.leagueoflegends.com/)
 - [Battlerite](https://store.steampowered.com/app/504370/Battlerite/)
@@ -94,8 +127,16 @@ DMOML is ideal for **top-down MOBAs** or any game requiring precise WASD-based d
 - [Diablo III](https://diablo3.blizzard.com/)
 - [Dota 2](https://store.steampowered.com/app/570/Dota_2/)
 
+### CBOMC Compatibility
+CBOMC is designed for point-and-click, top-down, and RTS style games. Some compatible titles include:
+- [StarCraft II](https://starcraft2.com/en-us/) – A fast-paced RTS with a point-and-click interface.
+- [Age of Empires II](https://www.ageofempires.com/games/aoeii/) – A classic RTS with intricate mouse-based controls.
+- [Company of Heroes](https://www.companyofheroes.com/) – A tactical RTS that benefits from quick, precise clicking.
+- [Command & Conquer: Red Alert 3](https://www.ea.com/games/command-and-conquer/command-and-conquer-red-alert-3) – Combines traditional RTS elements with point-and-click navigation.
+
 ---
 
 ## Support and Contribution
 
-For bug reports, feature requests, or contributions, visit the GitHub repository and submit an issue or pull request. Enhance your gameplay precision with DMOML and enjoy intuitive, mouse-driven directional controls!
+For bug reports, feature requests, or contributions, please visit the GitHub repository and submit an issue or pull request. Enhance your gameplay precision with DMOML and CBOMC, and enjoy intuitive, mouse-driven control!
+```
